@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./Common/react.js"></script>
+    <script src="./Common/react-dom.js"></script>
+    <script src="./Common/browser_5.5.38.js"></script>
+</head>
+<body>
+    <div id="reactContainer"></div>
+    <script type="text/babel">
+    
+    let names=['Xavier','React'];
+    var HelloComponent =React.createClass({
+        render:function(){
+            return <div>
+            {
+                names.map(function(name){
+                return <div key={name}>Hello,{name}!</div>                    
+                }
+                )
+            }
+            </div> 
+              }
+
+    });
+
+    ReactDOM.render(
+        <HelloComponent name="xavier"/>,
+        document.getElementById('reactContainer')
+    )
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./Common/react.js"></script>
+    <script src="./Common/react-dom.js"></script>
+    <script src="./Common/browser_5.5.38.js"></script>
+</head>
+<body>
+    <div id="reactContainer"></div>
+    <script type="text/babel">
+        let HelloBox=React.createClass({
+            render:function(){
+                return (<div>{'Hello '+this.props.myattr}</div>);
+            }
+        })
+        
+
+        ReactDOM.render(
+            <HelloBox myattr='xavier'/>,
+            document.getElementById('reactContainer'))
+    </script>
+
+
+</body>
+</html>
